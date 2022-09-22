@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+
+:root {
+    --primary-color: #6C63FF;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, select, textarea{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    width: 80%;
+    margin: 10px auto 70px auto;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  @media only screen and (max-width: 991px){
+    .progress-step::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        font-size: 0.85rem;
+        color: #666;
+     }
+    
+    .input-group{
+      width: 100% !important;
+    }
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  /* Form */
+  .form {
+    width: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .input-group{
+    width: 50%;
+  }
+  
+  .title{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #111111;
+  }
+  .notice{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */  
+  .btns-group .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30%;
+  }
+  .btns-group .btn-prev{
+    background-color: #D0D0D0;
+  }
+  
+  .btns-group .btn:hover:not(.btn-submit) {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+  
+  .btns-group .btn-submit{
+    background-color: #0B5ED7;
+  }
+  
+
+.annonce{
+    display: none;
+}
+
+.dropzone{
+    border: 1px solid #6C63FF;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.dropzone.err {
+  border: 2px solid #c6192d;
+}
+
+.dropzone .icon{
+    color: #6C63FF;
+    font-size: 14px;
+}
+
+.dz-message label {
+  font-size: 18px;
+  color: #6C63FF;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.dz-message label:hover {
+  color: #453dd7;
+}
+
+.dz-message .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+  border: none;
+}
+
+
+.dropzone p{
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.input-group.err input:not(#prix), .input-group.err select, .input-group.err textarea{
+    border: 2px solid #D13649;
+}
+
+.input-group.err input:not(#prix):hover, .input-group.err select:hover, .input-group.err textarea:hover{
+    border:  2px solid #c6192d;
+}
+
+.input-group span.err{
+    display: none;
+}
+
+.input-group.err span.err{
+    display: block;
+    color: #D13649;
+}

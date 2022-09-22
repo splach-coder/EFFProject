@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+form{
+    max-width: 545px ;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.row input, .row select{
+    padding: 10px;
+}
+
+.row input:hover, .row select:hover{
+    border:  1px solid black;
+}
+
+.row.err input, .row.err select{
+    border: 2px solid #D13649;
+}
+
+.row.err input:hover, .row.err select:hover{
+    border:  2px solid #c6192d;
+}
+.row span.err{
+    display: none;
+}
+
+.row.err span.err{
+    display: block;
+    color: #D13649;
+}
+
+.faq{
+font-size: 14px;
+}
+
+.faq a{
+text-decoration: none;
+}
+
+.description{
+font-size: 16px;
+}
+.star{
+color: red;
+}
+
+
+.load {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit
+}
+
+.load::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading1 1s ease infinite;
+    z-index: 10
+}
+
+.load::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px dashed #fff;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading1 2s linear infinite;
+    z-index: 5
+}
+
+@keyframes loading1 {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+button.activeLoading {
+    transform: scale(.85)
+}
+
+button.activeLoading .loading {
+    visibility: visible;
+    opacity: 1
+}
+
+button .loading {
+    opacity: 0;
+    visibility: hidden
+}

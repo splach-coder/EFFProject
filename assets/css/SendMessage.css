@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+
+
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2d2d2d;
+}
+
+input, textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.container.r{
+    width: 60%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.col{
+    padding: 33px 26px;
+    background-color: #F8F9FA;
+    border-radius: 15px;
+}
+
+.superTitle{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.atten{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;  
+}
+
+.msge{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px; 
+    color: #9b9b9b; 
+}
+
+
+.row h4{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px; 
+    color: #000000; 
+}
+
+.row .rp{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px; 
+    color: #000000; 
+}
+
+.line{
+    width: 90%;
+    height: 2px;
+    border-radius: 15px;
+    background-color: #ccc;
+    margin: 15px 0;
+}
+
+
+.btnEnvoyer.disabled{
+    background-color: #9b9b9b;
+    pointer-events: none;
+    border: 1px solid #9b9b9b;
+}

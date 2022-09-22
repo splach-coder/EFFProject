@@ -1,0 +1,129 @@
+.con .states{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.states .state{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    border-radius: 15px;
+    height: 130px;
+    padding: 40px 20px;
+    background: #f5f5f5;
+    box-shadow:  -12px 12px 41px #cbcfdc,
+                 12px -12px 41px #fdffff;
+}
+
+.states .state .data{
+    font-size: 20px;
+    color: #333;
+    position: relative;
+}
+
+.states .state .data .nbr{
+    color: rgb(62, 62, 234);
+    font-size: 40px;
+    font-weight: 500;
+    
+}
+
+.states .state .data p{
+    color: #777;
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+
+.states .state .icon{
+    color: rgb(62, 62, 234);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+/*Tables css*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.tables{
+  width: 100%;
+  display: flex;
+}
+.left-table{
+  width: 65%;
+  margin-right: 5%;
+}
+.right-table{
+  width: 30%;
+}
+.sub-table{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sub-table a{
+  text-decoration: none;
+  border: none;
+  background-color: #6C63FF;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.left-table .sub-table .text, .right-table .sub-table .text{
+  color: #6C63FF;
+  font-size: 20px;
+  position: relative;
+  left: -50px;
+}
+.table{
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+
+.table .header, .table .info{
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f5f5f5;
+  margin: 5px;
+  transition: all 250ms ease-in;
+  cursor: pointer;
+}
+
+.table .header{
+  background-color: #6C63FF;
+  margin: 5px;
+  color: white;
+}
+
+
+.table .header span, .table .info span{
+  width: 25%;
+}
+
+.right-table .table .header span:first-child,.right-table .table .info span:first-child{
+  width: 25%;
+}
+
+.right-table .table .header span:last-child,.right-table .table .info span:last-child{
+  width: 75%;
+}
+
+.table .info:hover{
+  transform: scale(1);
+}
+
+.info:focus-within ~ .info,
+.info:hover ~ .info {
+  transform: translateY(10px);
+}

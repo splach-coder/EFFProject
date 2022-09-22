@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.row input{
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+form, .embedded{
+    max-width: 545px ;
+    font-family: 'Rubik', sans-serif;
+}
+
+.row input:focus{
+    border: 1px solid #2455CC;
+}
+
+.row input:hover{
+    border:  1px solid black;
+}
+
+.row a{
+    display: flex;
+    justify-content: end;
+    color: #444;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.row .btn{
+    padding: 8px;
+    width: 100%;
+}
+
+.row .line1{
+    background-color: #555;
+    height: 1px;
+}
